@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    body{
+        max-width: 1440px;
+        min-height: 100vh;
+        background-color: hsl(0, 0%, 86%);
+        border: 2px dotted red;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+/**********************************************Section**************************************/
+    section{
+        position: relative;
+        width: 420px;
+        height: 280px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px 10px 70px 10px;
+    }
+    .attribution{
+        position: relative;
+        top:15%;
+    }
+
+
+/**********************************************Input**************************************/
+    .display{
+        display:flex;
+        gap: 10px;
+        p{
+            font-size: 0.3em;
+        }
+        .input{
+        input{
+            border-radius: 5px;
+            width: 90px;
+            height: 35px;
+            padding-left: 10px;
+            font-weight: 700;
+            border:1px solid red;
+        } 
+        #day{
+            margin-top: 25px;
+            margin-bottom: -10px;
+            color:red;
+        }
+        
+        #month{
+            margin-top: 25px;
+            margin-bottom: -10px;
+            color:red;
+        }
+
+        #year{
+            margin-top: 25px;
+            margin-bottom: -10px;
+            color:red;
+        }
+
+        .validation{
+            color:red;
+            margin-top: 3px;
+            font-size: 0.25em;
+            font-weight: 400;
+            font-style: italic;
+        }
+        
+        }
+        .input:nth-child(1){
+            margin-left: 25px;
+        }
+    
+    }
+
+/******************************************Horizontal line***********************************/
+    hr{
+        margin:15px 0px 0px 25px;
+        width: 330px;
+    }
+    
+/**********************************************Img btn**************************************/
+    figure{
+        position:absolute;
+        top:87px;
+        right:25px;
+        width: 41px;
+        height: 41px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(259, 100%, 65%);
+            border-radius: 50%;
+        .svg{
+            background-color: hsl(259, 100%, 65%);
+            border-radius: 50%;
+            g{
+                height: 30px;
+                width: 40px;
+            }
+            }
+    }
+    figure:hover{
+        cursor: pointer;
+    }
+
+/**********************************************Result**************************************/
+    .result{
+        margin: 15px 0 0 25px;
+        span{
+            color : hsl(259, 100%, 65%);
+        }
+        span,p{
+        
+            font-weight:800;
+            font-style: italic;
+        }
+    }
+
+/**********************************************Media Query**************************************/
+@media screen and (max-width : 420px){
+    section{
+        position: relative;
+        width: 200px;
+        height: 310px;
+    }
+
+    .display{
+        display:flex;
+        gap: 5px;
+            .input{
+                input{
+                        border-radius: 5px;
+                        width: 50px;
+                        height: 30px;
+                        margin-top:0px;
+                        padding-left: 5px;
+                    } 
+            }
+                .input:nth-child(1){
+                    margin-left:10px;
+                }
+    }
+    hr{
+        margin:23px 0px 0px 10px;
+        width: 180px;
+    }
+    
+    figure{
+        position:absolute;
+        top:105px;
+        right:80px;
+    }
+    .result{
+        margin: 15px 0 0 10px;
+        span{
+            color : hsl(259, 100%, 65%);
+        }
+        span,p{
+            font-weight:800;
+            font-style: italic;
+        }
+    }
+}

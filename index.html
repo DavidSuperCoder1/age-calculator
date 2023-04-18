@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="style.css" rel="stylesheet">
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section>
+    <!--**************************************Input******************************************-->
+       <div class="display">
+          <div class="input">
+            <p  id="day">DAY</p>
+              <input type="number" placeholder="DD" min="1" max='31'id="day_input" onkeyup="checkDay()">
+            <p class="validation" id="valid_day">This field is required.</p>
+          </div>
+            
+          <div class="input">
+            <p id="month">MONTH</p>
+                <input type="number" placeholder="MM" min="1" max="12" id="month_input" onkeyup="checkMonth()" >
+            <p class="validation" id="valid_month">This field is required.</p>
+          </div>
+
+          <div class="input">
+            <p id="year">YEAR</p>
+            <input type="number" placeholder="YYYY" min="1" id="year_input" onkeyup="checkYear()">
+            <p class="validation" id="valid_year">This field is required.</p>
+          </div>
+      </div>
+
+    <hr>
+    <!--**************************************Img Btn******************************************-->
+    
+    <figure onclick="calculateAge()">
+      <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 46 44">
+        <g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g>
+      </svg>
+
+    </figure>
+    <!--**************************************Result******************************************-->
+
+    <div class="result">
+      <p ><span id="year_span"> -- </span>years</p>
+      <p><span id="month_span"> -- </span>months</p>
+      <p><span id="day_span"> -- </span>days</p>
+    </div>
+
+  <!--**************************************Challenge by***************************************-->
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">David Lian</a>.
+    </div>
+  </section>
+
+<script src="action.js"></script>
+</body>
+</html>
